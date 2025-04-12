@@ -1,5 +1,6 @@
 import { Playfair_Display, Inter } from 'next/font/google';
 
+// Carregar fontes com as configurações apropriadas
 const playfair = Playfair_Display({
   weight: '700',
   subsets: ['latin'],
@@ -18,7 +19,7 @@ export default function HomePage() {
           <img
             src="./logo.png"
             alt="Logo"
-            className="w-14 h-14 object-cover shadow-md border border-white/10 rounded-full"
+            className="w-14 h-14 object-cover shadow-md border border-white/5 rounded-full"
             style={{
               clipPath: 'polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%)',
               WebkitClipPath: 'polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%)',
@@ -53,15 +54,19 @@ export default function HomePage() {
       <section className="relative py-24 px-6 md:px-10 overflow-hidden bg-black text-white">
         {/* Floating words */}
         <div className="absolute inset-0 z-0 pointer-events-none select-none">
-          <span className="absolute text-[90px] text-white/20 font-bold left-4 top-12">Java</span>
-          <span className="absolute text-[80px] text-white/20 font-bold right-[30%] top-1/3">Python</span>
-          <span className="absolute text-[60px] text-white/20 font-bold right-10 bottom-32">CSS</span>
-          <span className="absolute text-[50px] text-white/20 font-bold left-[20%] bottom-20">HTML</span>
-          <span className="absolute text-[40px] text-white/20 font-bold left-[35%] top-[60%]">NODE.JS</span>
+          <span className="absolute text-[90px] text-white/5 overflow-x-auto font-bold transform -rotate-6 left-4 top-12 font-fonte animate-fade-in">Java</span>
+          <span className="absolute text-[60px] text-white/5 overflow-x-auto font-bold left-[2%] top-[60%] transform -rotate-6  font-fonte animate-fade-in">JavaScript</span>
+          <span className="absolute text-[90px] text-white/5 overflow-x-auto font-bold left-[20%] right-[30%] -rotate-6  font-fonte animate-fade-in">PHP</span>
+          <span className="absolute text-[80px] text-white/5 overflow-x-auto font-bold transform -rotate-12 right-[30%] top-1/3 font-fodao animate-fade-in">Python</span>
+          <span className="absolute text-[60px] text-white/5 overflow-x-auto font-bold transform -rotate-45 top-[10%] right-10 bottom-32 font-fonte animate-fade-in">RUBY</span>
+          <span className="absolute text-[60px] text-white/5 overflow-x-auto font-bold transform -rotate-45 right-10 bottom-32 font-fonte animate-fade-in">CSS</span>
+          <span className="absolute text-[50px] text-white/5 overflow-x-auto font-bold left-[45%] top-[70px] transform  -rotate-46 font-fonte animate-fade-in">HTML</span>
+          <span className="absolute text-[40px] text-white/5 overflow-x-auto font-bold left-[35%] top-[60%] transform -rotate-6 font-fonte animate-fade-in">NODE.JS</span>
         </div>
 
         {/* Conteúdo */}
-        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-20 relative z-10">
+        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-20 lg:gap-32 relative z-10">
+          {/* Texto principal */}
           <div className="flex-1 text-center lg:text-left">
             <h2 className={`${playfair.className} text-5xl md:text-6xl font-bold mb-6 leading-tight`}>
               <span className="text-cyan-400">O.</span>Regis
@@ -69,21 +74,37 @@ export default function HomePage() {
             <p className="text-purple-500 text-xl font-semibold mb-2">Front-End Lead</p>
             <p className="text-gray-300 text-lg mb-6">Full-Stack Software Developer</p>
             <p className="text-gray-400 max-w-md mx-auto lg:mx-0 mb-8">
-              I’m an enthusiastic and creative technologist with hands-on skills in a wide range of software, tools, and programming languages.
+              I’m a passionate full-stack developer and cybersecurity enthusiast with hands-on skills in pentesting, programming, and system analysis.
             </p>
             <button className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-full font-semibold transition duration-300">
               Let’s Talk
             </button>
           </div>
 
-          <div className="flex-1 relative w-[300px] h-[400px]">
-            <div className="absolute inset-0 bg-purple-600 opacity-30 rounded-xl transform rotate-6 -translate-y-3 -translate-x-3 z-0"></div>
-            <div className="absolute inset-0 bg-purple-800 opacity-20 rounded-xl transform rotate-12 translate-y-2 translate-x-2 z-0"></div>
+          {/* Imagem com efeitos */}
+          <div className="flex-1 relative w-[180px] h-[500px] mx-auto z-10 mt-10 lg:mt-0">
+            {/* Camadas de cor para um efeito mais dark */}
+            <div className="absolute inset-0 bg-[#04BFAD] opacity-40 rounded-xl transform rotate-6 -translate-y-3 -translate-x-3 z-0"></div>
+            <div className="absolute inset-0 bg-[#013440] opacity-30 rounded-xl transform rotate-12 translate-y-2 translate-x-2 z-0"></div>
+            <div className="absolute inset-0 bg-[#027373] opacity-20 rounded-xl transform rotate-180 -translate-y-2 -translate-x-3 z-0"></div>
+            <div className="absolute inset-0 bg-[#172026] opacity-20 rounded-xl transform rotate-3 -translate-y-1 -translate-x-2 z-0"></div>
+
+            {/* Efeito de vidro */}
+            <div className="absolute inset-0 bg-black bg-opacity-60 backdrop-blur-lg rounded-xl z-10"></div>
+
+            {/* Imagem de perfil */}
             <img
               src="https://i.pinimg.com/736x/4b/86/8d/4b868d31ed242b849f1798f397adddca.jpg"
               alt="Profile"
-              className="relative rounded-xl shadow-xl w-full h-full object-cover z-10"
+              className="relative rounded-xl shadow-xl w-full h-full object-cover object-top z-20"
             />
+
+            {/* Elementos decorativos ao lado da foto */}
+            <span className="absolute -left-10 top-1/3 text-purple-400 text-5xl font-bold z-30">{'{'}</span>
+            <span className="absolute -right-10 bottom-1/4 text-purple-400 text-5xl font-bold z-30">{'>'}</span>
+            <span className="absolute -bottom-10 right-0 text-3xl text-white/80 z-30 transform -rotate-6 origin-bottom-right font-fonte">
+              <span className="text-teal-400">$npm</span> {'{'} <span className="text-purple-400">HeyThere</span> 👋
+            </span>
           </div>
         </div>
 
