@@ -71,8 +71,9 @@ export default function HomePage() {
             <h2 className={`${playfair.className} text-5xl md:text-6xl font-bold mb-6 leading-tight`}>
               <span className="text-cyan-400">O.</span>Regis
             </h2>
-            <p className="text-purple-500 text-xl font-semibold mb-2">Front-End Lead</p>
-            <p className="text-gray-300 text-lg mb-6">Full-Stack Software Developer</p>
+            <p className="text-purple-500 text-xl font-semibold mb-2">
+              Full-Stack Developer with Security Specialization
+            </p>
             <p className="text-gray-400 max-w-md mx-auto lg:mx-0 mb-8">
               I’m a passionate full-stack developer and cybersecurity enthusiast with hands-on skills in pentesting, programming, and system analysis.
             </p>
