@@ -135,123 +135,181 @@ export default function Home() {
             />
           </svg>
         </div>
-
+                
         <div className="mx-auto text-start mb-16">
           <h2 className={`${playfair.className} text-3xl md:text-4xl font-bold mb-4`}>
             <span className="text-cyan-400">Skills</span>
           </h2>
           <p className="text-gray-300">Programming languages /<br />Management / Hobbies</p>
         </div>
-
+                
         <div className="relative flex justify-center items-center">
-          <div className="relative w-full h-[600px] flex justify-center items-center">
-            {/* React - exemplo */}
-            <div className="absolute flex flex-col items-center group transition-all duration-300 top-1/5 left-7/10">
-              {/* Ícone redondo com efeito de hover */}
+          <div className="relative w-full h-[800px] flex justify-center items-center">
+            {/* React */}
+            <div className="absolute flex flex-col items-center group transition-all duration-300 top-1/5 left-1/5">
+              <div className="w-28 h-28 bg-cyan-600/30 backdrop-blur-lg rounded-full flex justify-center items-center shadow-2xl ring-2 ring-cyan-400 hover:scale-110 transition-transform">
               <div className="w-28 h-28 bg-cyan-600/30 backdrop-blur-lg rounded-full flex justify-center items-center shadow-2xl ring-2 ring-cyan-400 hover:scale-110 transition-transform">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Icon" className="w-24 h-24" />
               </div>
-              {/* Modal tipo nuvem */}
+              </div>
               <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 mt-4 p-3 bg-cyan-50/10 backdrop-blur-md rounded-2xl shadow-xl text-center transform scale-95 group-hover:scale-100">
                 <span className="text-cyan-400 font-semibold text-lg">React</span>
                 <div className="text-xs text-gray-200 mt-1">
-                  <p>
-                    Level: <span className="text-teal-300">8</span>
-                  </p>
-                  <p>
-                    Experience: <span className="text-teal-300">4 yrs</span>
-                  </p>
+                  <p>Level: <span className="text-teal-300">8</span></p>
+                  <p>Experience: <span className="text-teal-300">4 yrs</span></p>
                 </div>
               </div>
             </div>
-
-            <div className="absolute flex flex-col items-center group transition-all duration-300 top-1/5 left-7/10">
-          {/* Ícone redondo com efeito de hover */}
-          <div className="w-28 h-28 bg-cyan-600/30 backdrop-blur-lg rounded-full flex justify-center items-center shadow-2xl ring-2 ring-cyan-400 hover:scale-110 transition-transform">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Icon" className="w-24 h-24" />
-          </div>
-          {/* Modal tipo nuvem */}
-          <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 mt-4 p-3 bg-cyan-50/10 backdrop-blur-md rounded-2xl shadow-xl text-center transform scale-95 group-hover:scale-100">
-            <span className="text-cyan-400 font-semibold text-lg">React</span>
-            <div className="text-xs text-gray-200 mt-1">
-              <p>
-                Level: <span className="text-teal-300">8</span>
-              </p>
-              <p>
-                Experience: <span className="text-teal-300">4 yrs</span>
-              </p>
+                
+            {/* Python */}
+            <div className="absolute flex flex-col items-center group transition-all duration-300 top-1/12 left-2/5">
+              <div className="w-28 h-28 bg-yellow-500/30 backdrop-blur-lg rounded-full flex justify-center items-center shadow-2xl ring-2 ring-yellow-400 hover:scale-110 transition-transform">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python Icon" className="w-24 h-24" />
+              </div>
+              <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 mt-4 p-3 bg-yellow-50/10 backdrop-blur-md rounded-2xl shadow-xl text-center transform scale-95 group-hover:scale-100">
+                <span className="text-yellow-400 font-semibold text-lg">Python</span>
+                <div className="text-xs text-gray-200 mt-1">
+                  <p>Level: <span className="text-teal-300">9</span></p>
+                  <p>Experience: <span className="text-teal-300">6 yrs</span></p>
+                </div>
+              </div>
+            </div>
+                
+            {/* PHP */}
+            <div className="absolute flex flex-col items-center group transition-all duration-300 top-2/5 left-1/12">
+              <div className="w-28 h-28 bg-purple-500/30 backdrop-blur-lg rounded-full flex justify-center items-center shadow-2xl ring-2 ring-purple-400 hover:scale-110 transition-transform">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP Icon" className="w-24 h-24" />
+              </div>
+              <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 mt-4 p-3 bg-purple-50/10 backdrop-blur-md rounded-2xl shadow-xl text-center transform scale-95 group-hover:scale-100">
+                <span className="text-purple-400 font-semibold text-lg">PHP</span>
+                <div className="text-xs text-gray-200 mt-1">
+                  <p>Level: <span className="text-teal-300">7</span></p>
+                  <p>Experience: <span className="text-teal-300">5 yrs</span></p>
+                </div>
+              </div>
+            </div>
+                
+            {/* Node.js */}
+            <div className="absolute flex flex-col items-center group transition-all duration-300 top-1/3 left-2/5">
+              <div className="w-28 h-28 bg-green-500/30 backdrop-blur-lg rounded-full flex justify-center items-center shadow-2xl ring-2 ring-green-400 hover:scale-110 transition-transform">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js Icon" className="w-24 h-24" />
+              </div>
+              <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 mt-4 p-3 bg-green-50/10 backdrop-blur-md rounded-2xl shadow-xl text-center transform scale-95 group-hover:scale-100">
+                <span className="text-green-400 font-semibold text-lg">Node.js</span>
+                <div className="text-xs text-gray-200 mt-1">
+                  <p>Level: <span className="text-teal-300">8</span></p>
+                  <p>Experience: <span className="text-teal-300">5 yrs</span></p>
+                </div>
+              </div>
+            </div>
+                
+            {/* JavaScript */}
+            <div className="absolute flex flex-col items-center group transition-all duration-300 top-1/3 left-3/5">
+              <div className="w-28 h-28 bg-yellow-400/30 backdrop-blur-lg rounded-full flex justify-center items-center shadow-2xl ring-2 ring-yellow-300 hover:scale-110 transition-transform">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS Icon" className="w-24 h-24" />
+              </div>
+              <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 mt-4 p-3 bg-yellow-50/10 backdrop-blur-md rounded-2xl shadow-xl text-center transform scale-95 group-hover:scale-100">
+                <span className="text-yellow-300 font-semibold text-lg">JavaScript</span>
+                <div className="text-xs text-gray-200 mt-1">
+                  <p>Level: <span className="text-teal-300">9</span></p>
+                  <p>Experience: <span className="text-teal-300">7 yrs</span></p>
+                </div>
+              </div>
+            </div>
+                
+            {/* HTML */}
+            <div className="absolute flex flex-col items-center group transition-all duration-300 top-1/5 left-1/2">
+              <div className="w-28 h-28 bg-orange-500/30 backdrop-blur-lg rounded-full flex justify-center items-center shadow-2xl ring-2 ring-orange-400 hover:scale-110 transition-transform">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML Icon" className="w-24 h-24" />
+              </div>
+              <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 mt-4 p-3 bg-orange-50/10 backdrop-blur-md rounded-2xl shadow-xl text-center transform scale-95 group-hover:scale-100">
+                <span className="text-orange-400 font-semibold text-lg">HTML</span>
+                <div className="text-xs text-gray-200 mt-1">
+                  <p>Level: <span className="text-teal-300">9</span></p>
+                  <p>Experience: <span className="text-teal-300">7 yrs</span></p>
+                </div>
+              </div>
+            </div>
+                
+            {/* CSS */}
+            <div className="absolute flex flex-col items-center group transition-all duration-300 top-2/3 left-3/4">
+              <div className="w-28 h-28 bg-blue-400/30 backdrop-blur-lg rounded-full flex justify-center items-center shadow-2xl ring-2 ring-blue-300 hover:scale-110 transition-transform">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS Icon" className="w-24 h-24" />
+              </div>
+              <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 mt-4 p-3 bg-blue-50/10 backdrop-blur-md rounded-2xl shadow-xl text-center transform scale-95 group-hover:scale-100">
+                <span className="text-blue-300 font-semibold text-lg">CSS</span>
+                <div className="text-xs text-gray-200 mt-1">
+                  <p>Level: <span className="text-teal-300">8</span></p>
+                  <p>Experience: <span className="text-teal-300">7 yrs</span></p>
+                </div>
+              </div>
+            </div>
+                
+            {/* Tailwind */}
+            <div className="absolute flex flex-col items-center group transition-all duration-300 top-1/2 left-2/3">
+              <div className="w-28 h-28 bg-teal-500/30 backdrop-blur-lg rounded-full flex justify-center items-center shadow-2xl ring-2 ring-teal-400 hover:scale-110 transition-transform">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind Icon" className="w-24 h-24"/>
+             </div>
+              <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 mt-4 p-3 bg-teal-50/10 backdrop-blur-md rounded-2xl shadow-xl text-center transform scale-95 group-hover:scale-100">
+                <span className="text-teal-400 font-semibold text-lg">Tailwind</span>
+                <div className="text-xs text-gray-200 mt-1">
+                  <p>Level: <span className="text-teal-300">7</span></p>
+                  <p>Experience: <span className="text-teal-300">3 yrs</span></p>
+                </div>
+              </div>
+            </div>
+                
+            {/* Docker */}
+            <div className="absolute flex flex-col items-center group transition-all duration-300 top-2/3 left-1/3">
+              <div className="w-28 h-28 bg-sky-500/30 backdrop-blur-lg rounded-full flex justify-center items-center shadow-2xl ring-2 ring-sky-400 hover:scale-110 transition-transform">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker Icon" className="w-24 h-24" />
+              </div>
+              <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 mt-4 p-3 bg-sky-50/10 backdrop-blur-md rounded-2xl shadow-xl text-center transform scale-95 group-hover:scale-100">
+                <span className="text-sky-400 font-semibold text-lg">Docker</span>
+                <div className="text-xs text-gray-200 mt-1">
+                  <p>Level: <span className="text-teal-300">7</span></p>
+                  <p>Experience: <span className="text-teal-300">4 yrs</span></p>
+                </div>
+              </div>
+            </div>
+                
+            {/* MySQL */}
+            <div className="absolute flex flex-col items-center group transition-all duration-300 top-5/6 left-1/4">
+              <div className="w-28 h-28 bg-blue-600/30 backdrop-blur-lg rounded-full flex justify-center items-center shadow-2xl ring-2 ring-blue-500 hover:scale-110 transition-transform">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL Icon" className="w-24 h-24" />
+              </div>
+              <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 mt-4 p-3 bg-blue-50/10 backdrop-blur-md rounded-2xl shadow-xl text-center transform scale-95 group-hover:scale-100">
+                <span className="text-blue-400 font-semibold text-lg">MySQL</span>
+                <div className="text-xs text-gray-200 mt-1">
+                  <p>Level: <span className="text-teal-300">8</span></p>
+                  <p>Experience: <span className="text-teal-300">6 yrs</span></p>
+                </div>
+              </div>
+            </div>
+                
+            {/* MariaDB */}
+            <div className="absolute flex flex-col items-center group transition-all duration-300 top-5/6 left-2/3">
+              <div className="w-28 h-28 bg-indigo-500/30 backdrop-blur-lg rounded-full flex justify-center items-center shadow-2xl ring-2 ring-indigo-400 hover:scale-110 transition-transform ">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mariadb/mariadb-original.svg" alt="MariaDB Icon" className="w-24 h-24" />
+              </div>
+              <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 mt-4 p-3 bg-indigo-50/10 backdrop-blur-md rounded-2xl shadow-xl text-center transform scale-95 group-hover:scale-100">
+                <span className="text-indigo-400 font-semibold text-lg">MariaDB</span>
+                <div className="text-xs text-gray-200 mt-1">
+                  <p>Level: <span className="text-teal-300">7</span></p>
+                  <p>Experience: <span className="text-teal-300">5 yrs</span></p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-                  
-        <div className="absolute flex flex-col items-center group transition-all duration-300 top-1/12 left-1.5">
-          {/* Ícone redondo com efeito de hover */}
-          <div className="w-28 h-28 bg-yellow-500/30 backdrop-blur-lg rounded-full flex justify-center items-center shadow-2xl ring-2 ring-yellow-400 hover:scale-110 transition-transform">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python Icon" className="w-24 h-24" />
-          </div>
-          {/* Modal tipo nuvem */}
-          <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 mt-4 p-3 bg-yellow-50/10 backdrop-blur-md rounded-2xl shadow-xl text-center transform scale-95 group-hover:scale-100">
-            <span className="text-yellow-400 font-semibold text-lg">Python</span>
-            <div className="text-xs text-gray-200 mt-1">
-              <p>
-                Level: <span className="text-teal-300">9</span>
-              </p>
-              <p>
-                Experience: <span className="text-teal-300">6 yrs</span>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="absolute flex flex-col items-center group transition-all duration-300 top-7/12 left-1/12">
-          {/* Ícone redondo com efeito de hover */}
-          <div className="w-28 h-28 bg-purple-500/30 backdrop-blur-lg rounded-full flex justify-center items-center shadow-2xl ring-2 ring-purple-400 hover:scale-110 transition-transform">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP Icon" className="w-24 h-24" />
-          </div>
-          {/* Modal tipo nuvem */}
-          <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 mt-4 p-3 bg-purple-50/10 backdrop-blur-md rounded-2xl shadow-xl text-center transform scale-95 group-hover:scale-100">
-            <span className="text-purple-400 font-semibold text-lg">PHP</span>
-            <div className="text-xs text-gray-200 mt-1">
-              <p>
-                Level: <span className="text-teal-300">7</span>
-              </p>
-              <p>
-                Experience: <span className="text-teal-300">5 yrs</span>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="absolute flex flex-col items-center group transition-all duration-300  left-1/6">
-          {/* Ícone redondo com efeito de hover */}
-          <div className="w-28 h-28 bg-green-500/30 backdrop-blur-lg rounded-full flex justify-center items-center shadow-2xl ring-2 ring-green-400 hover:scale-110 transition-transform">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js Icon" className="w-24 h-24" />
-          </div>
-          {/* Modal tipo nuvem */}
-          <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 mt-4 p-3 bg-green-50/10 backdrop-blur-md rounded-2xl shadow-xl text-center transform scale-95 group-hover:scale-100">
-            <span className="text-green-400 font-semibold text-lg">Node.js</span>
-            <div className="text-xs text-gray-200 mt-1">
-              <p>
-                Level: <span className="text-teal-300">8</span>
-              </p>
-              <p>
-                Experience: <span className="text-teal-300">5 yrs</span>
-              </p>
-            </div>
-          </div>
-        </div>
-
-
-            {/* Outros Skills aqui... */}
-          </div>
-        </div>
-
+                
         <div className="mt-16 text-center">
           <button className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-full font-semibold transition duration-300">
             See All Projects
           </button>
         </div>
-      </section>
+    </section>
+
     </main>
   );
 }
