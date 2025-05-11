@@ -5,3 +5,80 @@
     --font-fonte: "Sedgwick Ave Display", cursive;
   }
 
+@keyframes move-react {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(100px, 150px); }
+    100% { transform: translate(0, 0); }
+  }
+
+  @keyframes move-python {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(-150px, 100px); }
+    100% { transform: translate(0, 0); }
+  }
+
+  @keyframes move-php {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(150px, -100px); }
+    100% { transform: translate(0, 0); }
+  }
+
+  @keyframes move-nodejs {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(-100px, -150px); }
+    100% { transform: translate(0, 0); }
+  }
+
+  @keyframes move-js {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(200px, 50px); }
+    100% { transform: translate(0, 0); }
+  }
+
+  @keyframes move-html {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(-200px, 200px); }
+    100% { transform: translate(0, 0); }
+  }
+
+  @keyframes move-css {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(100px, -100px); }
+    100% { transform: translate(0, 0); }
+  }
+
+  @keyframes move-tailwind {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(-250px, 100px); }
+    100% { transform: translate(0, 0); }
+  }
+
+  @keyframes move-docker {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(200px, -50px); }
+    100% { transform: translate(0, 0); }
+  }
+
+  @keyframes move-mysql {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(-150px, -150px); }
+    100% { transform: translate(0, 0); }
+  }
+
+  @keyframes move-mariadb {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(150px, 100px); }
+    100% { transform: translate(0, 0); }
+  }
+
+  .animate-move-react { animation: move-react 20s ease-in-out infinite; }
+  .animate-move-python { animation: move-python 24s ease-in-out infinite; }
+  .animate-move-php { animation: move-php 26s ease-in-out infinite; }
+  .animate-move-nodejs { animation: move-nodejs 15s ease-in-out infinite; }
+  .animate-move-js { animation: move-js 18s ease-in-out infinite; }
+  .animate-move-html { animation: move-html 18s ease-in-out infinite; }
+  .animate-move-css { animation: move-css 16s ease-in-out infinite; }
+  .animate-move-tailwind { animation: move-tailwind 15s ease-in-out infinite; }
+  .animate-move-docker { animation: move-docker 20s ease-in-out infinite; }
+  .animate-move-mysql { animation: move-mysql 24s ease-in-out infinite; }
+  .animate-move-mariadb { animation: move-mariadb 26s ease-in-out infinite; } 

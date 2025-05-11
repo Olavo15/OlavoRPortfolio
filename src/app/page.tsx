@@ -124,7 +124,7 @@ export default function Home() {
       </section>
 
       {/* Skills Section COM NOVA SKIN */}
-      <section className="relative py-24 px-6 md:px-10 bg-gradient-to-br from-[#042326] via-[#0A3A40] to-[#0F5959] text-white">
+      <section className="relative py-24 px-6 md:px-10 bg-gradient-to-br from-[#042326] via-[#0A3A40] to-[#0F5959] text-white bg-[#012E40]">
         {/* ONDA NO TOPO */}
         <div className="absolute -top-[1px] left-0 w-full z-0">
           <svg className="w-full h-[100px]" viewBox="0 0 1440 320" preserveAspectRatio="none">
@@ -146,13 +146,13 @@ export default function Home() {
         <div className="relative flex justify-center items-center">
           <div className="relative w-full h-[800px] flex justify-center items-center">
             {/* React */}
-            <div className="absolute flex flex-col items-center group transition-all duration-300 top-1/5 left-1/5">
+            <div className="absolute flex flex-col items-center group transition-all duration-300 top-1/5 left-1/5 animate-move-react">
               <div className="w-28 h-28 bg-cyan-600/30 backdrop-blur-lg rounded-full flex justify-center items-center shadow-2xl ring-2 ring-cyan-400 hover:scale-110 transition-transform">
               <div className="w-28 h-28 bg-cyan-600/30 backdrop-blur-lg rounded-full flex justify-center items-center shadow-2xl ring-2 ring-cyan-400 hover:scale-110 transition-transform">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Icon" className="w-24 h-24" />
               </div>
               </div>
-              <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 mt-4 p-3 bg-cyan-50/10 backdrop-blur-md rounded-2xl shadow-xl text-center transform scale-95 group-hover:scale-100">
+              <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 mt-4 p-3 bg-cyan-50/10 backdrop-blur-md rounded-2xl shadow-xl text-center transform scale-95 group-hover:scale-100 ">
                 <span className="text-cyan-400 font-semibold text-lg">React</span>
                 <div className="text-xs text-gray-200 mt-1">
                   <p>Level: <span className="text-teal-300">8</span></p>
@@ -162,8 +162,8 @@ export default function Home() {
             </div>
                 
             {/* Python */}
-            <div className="absolute flex flex-col items-center group transition-all duration-300 top-1/12 left-2/5">
-              <div className="w-28 h-28 bg-yellow-500/30 backdrop-blur-lg rounded-full flex justify-center items-center shadow-2xl ring-2 ring-yellow-400 hover:scale-110 transition-transform">
+            <div className="absolute flex flex-col items-center group transition-all duration-300 top-[25rem] left-[30rem] animate-move-python">
+              <div className="w-28 h-28 bg-yellow-500/30 backdrop-blur-lg rounded-full flex justify-center items-center shadow-2xl ring-2 ring-yellow-400 hover:scale-110 transition-transform move-python">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python Icon" className="w-24 h-24" />
               </div>
               <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 mt-4 p-3 bg-yellow-50/10 backdrop-blur-md rounded-2xl shadow-xl text-center transform scale-95 group-hover:scale-100">
@@ -176,7 +176,7 @@ export default function Home() {
             </div>
                 
             {/* PHP */}
-            <div className="absolute flex flex-col items-center group transition-all duration-300 top-2/5 left-1/12">
+            <div className="absolute flex flex-col items-center group transition-all duration-300 top-2/5 left-1/12 animate-move-php">
               <div className="w-28 h-28 bg-purple-500/30 backdrop-blur-lg rounded-full flex justify-center items-center shadow-2xl ring-2 ring-purple-400 hover:scale-110 transition-transform">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP Icon" className="w-24 h-24" />
               </div>
@@ -190,7 +190,7 @@ export default function Home() {
             </div>
                 
             {/* Node.js */}
-            <div className="absolute flex flex-col items-center group transition-all duration-300 top-1/3 left-2/5">
+            <div className="absolute flex flex-col items-center group transition-all duration-300 top-1/3 left-2/5 animate-move-nodejs">
               <div className="w-28 h-28 bg-green-500/30 backdrop-blur-lg rounded-full flex justify-center items-center shadow-2xl ring-2 ring-green-400 hover:scale-110 transition-transform">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js Icon" className="w-24 h-24" />
               </div>
@@ -204,7 +204,7 @@ export default function Home() {
             </div>
                 
             {/* JavaScript */}
-            <div className="absolute flex flex-col items-center group transition-all duration-300 top-1/3 left-3/5">
+            <div className="absolute flex flex-col items-center group transition-all duration-300 top-1/3 left-3/5 animate-move-js">
               <div className="w-28 h-28 bg-yellow-400/30 backdrop-blur-lg rounded-full flex justify-center items-center shadow-2xl ring-2 ring-yellow-300 hover:scale-110 transition-transform">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS Icon" className="w-24 h-24" />
               </div>
@@ -218,7 +218,7 @@ export default function Home() {
             </div>
                 
             {/* HTML */}
-            <div className="absolute flex flex-col items-center group transition-all duration-300 top-1/5 left-1/2">
+            <div className="absolute flex flex-col items-center group transition-all duration-300 top-1/5 left-1/2 animate-move-html">
               <div className="w-28 h-28 bg-orange-500/30 backdrop-blur-lg rounded-full flex justify-center items-center shadow-2xl ring-2 ring-orange-400 hover:scale-110 transition-transform">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML Icon" className="w-24 h-24" />
               </div>
@@ -232,7 +232,7 @@ export default function Home() {
             </div>
                 
             {/* CSS */}
-            <div className="absolute flex flex-col items-center group transition-all duration-300 top-2/3 left-3/4">
+            <div className="absolute flex flex-col items-center group transition-all duration-300 top-2/3 left-3/4 animate-move-css">
               <div className="w-28 h-28 bg-blue-400/30 backdrop-blur-lg rounded-full flex justify-center items-center shadow-2xl ring-2 ring-blue-300 hover:scale-110 transition-transform">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS Icon" className="w-24 h-24" />
               </div>
@@ -246,7 +246,7 @@ export default function Home() {
             </div>
                 
             {/* Tailwind */}
-            <div className="absolute flex flex-col items-center group transition-all duration-300 top-1/2 left-2/3">
+            <div className="absolute flex flex-col items-center group transition-all duration-300 top-1/2 left-2/3 animate-move-tailwind">
               <div className="w-28 h-28 bg-teal-500/30 backdrop-blur-lg rounded-full flex justify-center items-center shadow-2xl ring-2 ring-teal-400 hover:scale-110 transition-transform">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind Icon" className="w-24 h-24"/>
              </div>
@@ -260,7 +260,7 @@ export default function Home() {
             </div>
                 
             {/* Docker */}
-            <div className="absolute flex flex-col items-center group transition-all duration-300 top-2/3 left-1/3">
+            <div className="absolute flex flex-col items-center group transition-all duration-300 top-2/3 left-1/3 animate-move-docker">
               <div className="w-28 h-28 bg-sky-500/30 backdrop-blur-lg rounded-full flex justify-center items-center shadow-2xl ring-2 ring-sky-400 hover:scale-110 transition-transform">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker Icon" className="w-24 h-24" />
               </div>
@@ -274,7 +274,7 @@ export default function Home() {
             </div>
                 
             {/* MySQL */}
-            <div className="absolute flex flex-col items-center group transition-all duration-300 top-5/6 left-1/4">
+            <div className="absolute flex flex-col items-center group transition-all duration-300 top-5/6 left-1/4 animate-move-mysql">
               <div className="w-28 h-28 bg-blue-600/30 backdrop-blur-lg rounded-full flex justify-center items-center shadow-2xl ring-2 ring-blue-500 hover:scale-110 transition-transform">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL Icon" className="w-24 h-24" />
               </div>
@@ -288,7 +288,7 @@ export default function Home() {
             </div>
                 
             {/* MariaDB */}
-            <div className="absolute flex flex-col items-center group transition-all duration-300 top-5/6 left-2/3">
+            <div className="absolute flex flex-col items-center group transition-all duration-300 top-5/6 left-2/3 animate-move-mariadb">
               <div className="w-28 h-28 bg-indigo-500/30 backdrop-blur-lg rounded-full flex justify-center items-center shadow-2xl ring-2 ring-indigo-400 hover:scale-110 transition-transform ">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mariadb/mariadb-original.svg" alt="MariaDB Icon" className="w-24 h-24" />
               </div>
