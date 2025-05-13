@@ -1,5 +1,6 @@
 import { Playfair_Display, Inter } from 'next/font/google';
 import SkillsSection from './skills1';
+import Exp from './exp';
 
 // Carregar fontes com as configurações apropriadas
 const playfair = Playfair_Display({
@@ -15,7 +16,7 @@ export default function Home() {
   return (
     <main className={`${inter.className} bg-black text-white min-h-screen relative overflow-hidden`}>
       {/* Header */}
-      <header className="flex flex-wrap justify-between items-center py-6 px-6 md:px-12 bg-zinc-900 shadow-md gap-y-4 z-10 relative">
+      <header className="fixed top-0 left-0 w-full flex flex-wrap justify-between items-center py-6 px-6 md:px-12 bg-zinc-900 shadow-md gap-y-4 z-50">
         <div className="flex items-center gap-4">
           <img
             src="./logo.png"
@@ -33,10 +34,15 @@ export default function Home() {
 
         <nav className="text-base md:text-lg font-medium">
           <ul className="flex flex-wrap gap-x-8 gap-y-2 justify-center md:justify-start">
-            {['Home', 'About Me', 'Experience', 'Contact'].map((item, i) => (
+            {[
+              { label: 'Home', href: '#home' },
+              { label: 'Skills', href: '#Skills' },
+              { label: 'Experience', href: '#experience' },
+              { label: 'Contact', href: '#contact' },
+            ].map((item, i) => (
               <li className="relative group" key={i}>
-                <a href="#" className="hover:text-purple-400 transition">
-                  {item}
+                <a href={item.href} className="hover:text-purple-400 transition">
+                  {item.label}
                 </a>
                 <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-purple-400 transition-all duration-300 group-hover:w-full"></span>
               </li>
@@ -52,17 +58,19 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-24 px-6 md:px-10 overflow-hidden bg-black text-white">
+<section id="home" className="relative pt-[190px] min-h-screen py-24 px-7 md:px-10 overflow-hidden bg-black text-white">
         {/* Floating words */}
         <div className="absolute inset-0 z-0 pointer-events-none select-none">
-          <span className="absolute text-[90px] text-white/5 overflow-x-auto font-bold transform -rotate-6 left-4 top-12 font-fonte animate-fade-in">Java</span>
-          <span className="absolute text-[60px] text-white/5 overflow-x-auto font-bold left-[2%] top-[60%] transform -rotate-6 font-fonte animate-fade-in">JavaScript</span>
-          <span className="absolute text-[90px] text-white/5 overflow-x-auto font-bold left-[20%] right-[30%] -rotate-6 font-fonte animate-fade-in">PHP</span>
+          <span className="absolute text-[90px] text-white/5 overflow-x-auto font-bold transform -rotate-6 left-4 top-35 font-fonte animate-fade-in">Java</span>
+          <span className="absolute text-[60px] text-white/5 overflow-x-auto font-bold left-[2%] top-[80%] transform -rotate-6 font-fonte animate-fade-in">JavaScript</span>
+          <span className="absolute text-[90px] text-white/5 overflow-x-auto font-bold left-[20%] right-[30%] -rotate-6 top-35 font-fonte animate-fade-in">PHP</span>
+          <span className="absolute text-[90px] text-white/5 overflow-x-auto font-bold transform rotate-21 left-4 top-[25rem] font-fonte animate-fade-in">Python</span>
+          <span className="absolute text-[60px] text-white/5 overflow-x-auto font-bold left-[25%] top-[50%] transform rotate-16 font-fonte animate-fade-in">JavaScript</span>
           <span className="absolute text-[80px] text-white/5 overflow-x-auto font-bold transform -rotate-12 right-[30%] top-1/3 font-fodao animate-fade-in">Python</span>
           <span className="absolute text-[60px] text-white/5 overflow-x-auto font-bold transform -rotate-45 top-[10%] right-10 bottom-32 font-fonte animate-fade-in">RUBY</span>
           <span className="absolute text-[60px] text-white/5 overflow-x-auto font-bold transform -rotate-45 right-10 bottom-32 font-fonte animate-fade-in">CSS</span>
-          <span className="absolute text-[50px] text-white/5 overflow-x-auto font-bold left-[45%] top-[70px] transform -rotate-46 font-fonte animate-fade-in">HTML</span>
-          <span className="absolute text-[40px] text-white/5 overflow-x-auto font-bold left-[35%] top-[60%] transform -rotate-6 font-fonte animate-fade-in">NODE.JS</span>
+          <span className="absolute text-[50px] text-white/5 overflow-x-auto font-bold left-[45%] top-[150px] transform -rotate-46  font-fonte animate-fade-in">HTML</span>
+          <span className="absolute text-[60px] text-white/5 overflow-x-auto font-bold left-[35%] top-[70%] transform -rotate-45 font-fonte animate-fade-in">NODE.JS</span>
         </div>
 
         {/* Conteúdo */}
@@ -126,6 +134,7 @@ export default function Home() {
 
       {/* Skills Section COM NOVA SKIN */}
      <SkillsSection/>
+     <Exp/>
 
     </main>
   );

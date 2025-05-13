@@ -17,8 +17,8 @@ const skills = [
     bgColor: "bg-yellow-500/30",
     ringColor: "ring-yellow-400",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-    level: 9,
-    experience: "6 yrs",
+    level: 10,
+    experience: "5 yrs",
   },
   {
     name: "PHP",
@@ -26,8 +26,8 @@ const skills = [
     bgColor: "bg-purple-500/30",
     ringColor: "ring-purple-400",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
-    level: 7,
-    experience: "5 yrs",
+    level: 8,
+    experience: "3 yrs",
   },
   {
     name: "Node.js",
@@ -44,8 +44,8 @@ const skills = [
     bgColor: "bg-yellow-400/30",
     ringColor: "ring-yellow-300",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-    level: 9,
-    experience: "7 yrs",
+    level: 9.5,
+    experience: "5 yrs",
   },
   {
     name: "HTML",
@@ -54,7 +54,7 @@ const skills = [
     ringColor: "ring-orange-400",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
     level: 9,
-    experience: "7 yrs",
+    experience: "5 yrs",
   },
   {
     name: "CSS",
@@ -62,17 +62,17 @@ const skills = [
     bgColor: "bg-blue-400/30",
     ringColor: "ring-blue-300",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-    level: 8,
-    experience: "7 yrs",
+    level: 9,
+    experience: "5 yrs",
   },
   {
     name: "Tailwind",
     color: "text-teal-400",
     bgColor: "bg-teal-500/30",
     ringColor: "ring-teal-400",
-    img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
-    level: 7,
-    experience: "3 yrs",
+    img: "https://raw.githubusercontent.com/tomowang/hugo-theme-tailwind/main/static/logo.svg",
+    level: 10,
+    experience: "5 yrs",
   },
   {
     name: "Docker",
@@ -101,6 +101,14 @@ const skills = [
     level: 7,
     experience: "5 yrs",
   },
+  {
+    name: "Kali",
+    color: "text-[#A9D9D0]",
+    bgColor: "bg-[#F2E7DC]/30",
+    img: "https://www.svgrepo.com/show/330767/kalilinux.svg",
+    level: 8,
+    experience: "6yrs",
+  }
 ];
 
 export default function SkillsSection() {
@@ -108,7 +116,7 @@ export default function SkillsSection() {
   const displayedSkills = showAll ? skills : skills.slice(0, 6);
 
   return (
-    <section className="relative py-24 px-6 md:px-10 bg-gradient-to-br from-[#042326] via-[#0A3A40] to-[#0F5959] text-white bg-[#012E40]">
+    <section className="relative py-24 px-6 md:px-10 bg-gradient-to-br from-[#042326] via-[#0A3A40] to-[#0F5959] text-white bg-[#012E40]" id="Skills">
       {/* Cabeçalho */}
       <div className="mx-auto text-start mb-16">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -157,6 +165,8 @@ export default function SkillsSection() {
             case "MariaDB":
               animationClass = "animate-move-mariadb";
               break;
+            case "Kali":
+              animationClass = "animate-move-kali"
             default:
               break;
           }
@@ -181,7 +191,7 @@ export default function SkillsSection() {
       </div>
 
       {/* Botão Mostrar Mais */}
-      {skills.length > 6 && (
+      {skills.length > 7 && (
         <div className="mt-12 text-center">
           <button
             className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-full font-semibold transition duration-300"

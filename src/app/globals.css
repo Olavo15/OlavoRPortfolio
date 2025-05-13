@@ -70,6 +70,11 @@
     50% { transform: translate(150px, 100px); }
     100% { transform: translate(0, 0); }
   }
+  @keyframes move-kali {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(125px, -50px); }
+    100% { transform: translate(0, 0); }
+  }
 
   .animate-move-react { animation: move-react 20s ease-in-out infinite; }
   .animate-move-python { animation: move-python 24s ease-in-out infinite; }
@@ -81,4 +86,9 @@
   .animate-move-tailwind { animation: move-tailwind 15s ease-in-out infinite; }
   .animate-move-docker { animation: move-docker 20s ease-in-out infinite; }
   .animate-move-mysql { animation: move-mysql 24s ease-in-out infinite; }
-  .animate-move-mariadb { animation: move-mariadb 26s ease-in-out infinite; } 
+  .animate-move-mariadb { animation: move-mariadb 26s ease-in-out infinite; }
+  .animate-move-kalu { animation: move-kali 20s ease-in-out  infinite;}
+
+  html {
+  scroll-behavior: smooth;
+}
