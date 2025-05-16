@@ -105,15 +105,35 @@ const skills = [
     name: "Kali",
     color: "text-[#A9D9D0]",
     bgColor: "bg-[#F2E7DC]/30",
+    ringColor: "ring-black",
     img: "https://www.svgrepo.com/show/330767/kalilinux.svg",
     level: 8,
     experience: "6yrs",
+  },
+  {
+    name: "Pentest",
+    color: "text-red-600",
+    bgColor: "bg-red-800/30",
+    ringColor: "ring-red-600",
+    img: "https://cdn-icons-png.flaticon.com/512/10961/10961307.png",
+    level: 7.5,
+    experience: "5yrs",
+  },
+  {
+    name: "Laravel",
+    color: "text-[#FF2D20]",
+    bgColor: "bg-[#FF2D20]/30",
+    ringColor: "ring-[#FF2D20]",
+    img: "https://static-00.iconduck.com/assets.00/laravel-icon-995x1024-dk77ahh4.png",
+    level: 8,
+    experience: "3 yrs",
   }
+
 ];
 
 export default function SkillsSection() {
   const [showAll, setShowAll] = useState(false);
-  const displayedSkills = showAll ? skills : skills.slice(0, 6);
+  const displayedSkills = showAll ? skills : skills.slice(6, 14);
 
   return (
     <section className="relative py-24 px-6 md:px-10 bg-gradient-to-br from-[#042326] via-[#0A3A40] to-[#0F5959] text-white bg-[#012E40]" id="Skills">
@@ -166,7 +186,13 @@ export default function SkillsSection() {
               animationClass = "animate-move-mariadb";
               break;
             case "Kali":
-              animationClass = "animate-move-kali"
+              animationClass = "animate-move-kali";
+              break;
+            case "Pentest":
+              animationClass = "animate-move-pentest";
+              break;
+            case "Laravel":
+              animationClass = "animate-move-laravel"
             default:
               break;
           }
@@ -191,7 +217,7 @@ export default function SkillsSection() {
       </div>
 
       {/* Botão Mostrar Mais */}
-      {skills.length > 7 && (
+      {skills.length > 5 && (
         <div className="mt-12 text-center">
           <button
             className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-full font-semibold transition duration-300"

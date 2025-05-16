@@ -1,79 +1,78 @@
 @import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
 @import "tailwindcss";
 
-@theme {
+  @theme {
     --font-fonte: "Sedgwick Ave Display", cursive;
   }
 
-@keyframes move-react {
-    0% { transform: translate(0, 0); }
-    50% { transform: translate(100px, 150px); }
-    100% { transform: translate(0, 0); }
+  @keyframes move-react {
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(120px, 100px, 60px); }
   }
 
   @keyframes move-python {
-    0% { transform: translate(0, 0); }
-    50% { transform: translate(-150px, 100px); }
-    100% { transform: translate(0, 0); }
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(-140px, 120px, -40px); }
   }
 
   @keyframes move-php {
-    0% { transform: translate(0, 0); }
-    50% { transform: translate(150px, -100px); }
-    100% { transform: translate(0, 0); }
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(160px, -90px, 80px); }
   }
 
   @keyframes move-nodejs {
-    0% { transform: translate(0, 0); }
-    50% { transform: translate(-100px, -150px); }
-    100% { transform: translate(0, 0); }
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(-120px, -130px, -60px); }
   }
 
   @keyframes move-js {
-    0% { transform: translate(0, 0); }
-    50% { transform: translate(200px, 50px); }
-    100% { transform: translate(0, 0); }
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(180px, 70px, 100px); }
   }
 
   @keyframes move-html {
-    0% { transform: translate(0, 0); }
-    50% { transform: translate(-200px, 200px); }
-    100% { transform: translate(0, 0); }
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(-200px, 160px, -80px); }
   }
 
   @keyframes move-css {
-    0% { transform: translate(0, 0); }
-    50% { transform: translate(100px, -100px); }
-    100% { transform: translate(0, 0); }
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(140px, -120px, 50px); }
   }
 
   @keyframes move-tailwind {
-    0% { transform: translate(0, 0); }
-    50% { transform: translate(-250px, 100px); }
-    100% { transform: translate(0, 0); }
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(-180px, 100px, -100px); }
   }
 
   @keyframes move-docker {
-    0% { transform: translate(0, 0); }
-    50% { transform: translate(200px, -50px); }
-    100% { transform: translate(0, 0); }
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(200px, -60px, 70px); }
   }
 
   @keyframes move-mysql {
-    0% { transform: translate(0, 0); }
-    50% { transform: translate(-150px, -150px); }
-    100% { transform: translate(0, 0); }
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(-160px, -150px, -90px); }
   }
 
   @keyframes move-mariadb {
-    0% { transform: translate(0, 0); }
-    50% { transform: translate(150px, 100px); }
-    100% { transform: translate(0, 0); }
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(160px, 90px, 40px); }
   }
+
   @keyframes move-kali {
-    0% { transform: translate(0, 0); }
-    50% { transform: translate(125px, -50px); }
-    100% { transform: translate(0, 0); }
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(140px, -100px, -70px); }
+  }
+
+  @keyframes move-pentest {
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(160px, 50px, 60px); }
+  }
+
+  @keyframes move-laravel {
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(130px, 110px, -50px); }
   }
 
   .animate-move-react { animation: move-react 20s ease-in-out infinite; }
@@ -86,8 +85,10 @@
   .animate-move-tailwind { animation: move-tailwind 15s ease-in-out infinite; }
   .animate-move-docker { animation: move-docker 20s ease-in-out infinite; }
   .animate-move-mysql { animation: move-mysql 24s ease-in-out infinite; }
-  .animate-move-mariadb { animation: move-mariadb 26s ease-in-out infinite; }
-  .animate-move-kalu { animation: move-kali 20s ease-in-out  infinite;}
+  .animate-move-mariadb { animation: move-mariadb 20s ease-in-out infinite; }
+  .animate-move-kali { animation: move-kali 20s ease-in-out  infinite;}
+  .animate-move-pentest {animation: move-pentest 20s ease-in-out infinite;}
+  .animate-move-laravel {animation: move-laravel 15s ease-in-out infinite;}
 
   html {
   scroll-behavior: smooth;
