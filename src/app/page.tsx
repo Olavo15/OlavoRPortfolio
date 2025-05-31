@@ -1,4 +1,5 @@
 import { Playfair_Display, Inter } from 'next/font/google';
+import Image from "next/image";
 import SkillsSection from './skills1';
 import Exp from './exp';
 
@@ -102,11 +103,14 @@ export default function Home() {
             <div className="absolute inset-0 bg-black bg-opacity-60 backdrop-blur-lg rounded-xl z-10"></div>
 
             {/* Imagem de perfil */}
-            <img
-              src="https://wallpapers.com/images/featured-full/joker-iphone-fqldciov9hmc1hob.jpg" 
-              alt="Profile"
-              className="relative rounded-xl shadow-xl w-full h-full object-cover object-top z-20"
-            />
+            <div className="relative w-full h-full rounded-xl overflow-hidden">
+              <Image
+                src="https://media.licdn.com/dms/image/v2/D4E03AQGwqEWYBi2tlg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1697739381460?e=1753920000&v=beta&t=iPvQUVlppRMc_WSxxH5cR1f52bMx0ndgfSfrWNUuh_U"
+                alt="Profile"
+                fill
+                className="rounded-xl shadow-xl object-cover object-top z-20"
+              />
+            </div>
 
             {/* Elementos decorativos ao lado da foto */}
             <span className="absolute -left-10 top-1/3 text-purple-400 text-5xl font-bold z-30">{'{'}</span>
