@@ -2,7 +2,6 @@ import { Playfair_Display, Inter } from 'next/font/google';
 import SkillsSection from './skills1';
 import Exp from './exp';
 
-// Carregar fontes com as configurações apropriadas
 const playfair = Playfair_Display({
   weight: '700',
   subsets: ['latin'],
@@ -104,7 +103,7 @@ export default function Home() {
 
             {/* Imagem de perfil */}
             <img
-              src="https://i.pinimg.com/736x/4b/86/8d/4b868d31ed242b849f1798f397adddca.jpg"
+              src="https://wallpapers.com/images/featured-full/joker-iphone-fqldciov9hmc1hob.jpg" 
               alt="Profile"
               className="relative rounded-xl shadow-xl w-full h-full object-cover object-top z-20"
             />
