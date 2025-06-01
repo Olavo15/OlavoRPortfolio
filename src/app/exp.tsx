@@ -1,6 +1,5 @@
 "use client";
 
-import { describe } from "node:test";
 import ClientCarousel from "../components/ClientCarousel";
 
 export default function Exp() {
