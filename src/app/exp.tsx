@@ -1,5 +1,6 @@
 "use client";
 
+import { describe } from "node:test";
 import ClientCarousel from "../components/ClientCarousel";
 
 export default function Exp() {
@@ -54,11 +55,76 @@ export default function Exp() {
       ],
       progress: 52,
     },
+    {
+      title: "Project Manager",
+      media: [
+          { type: "image", src: "/gerenciadorProjeto/gerenciadorProjeto.png" },
+          { type: "image", src: "/gerenciadorProjeto/gerenciadorProjetoCadastro.png" }, 
+          { type: "image", src: "/gerenciadorProjeto/gerenciamentoProjetoHome.png" }, 
+          { type: "image", src: "/gerenciadorProjeto/gerenciadorProjetoTarefa.png" }, 
+      ],
+      description:"We developed a customized task management platform focused on meeting the specific needs of a company that was looking for an in-house solution that was different from the ready-made tools available on the market, such as Jira and Trello. During development, we applied agile methodologies to ensure continuous deliveries and adaptability throughout the project, in addition to using semantic commit patterns to keep versioning organized and facilitate collaboration between the team. The platform offers customized features that provide greater control, flexibility, and efficiency in monitoring and executing the company's daily tasks, promoting management that is more aligned with its workflow.",
+      languages: [
+        "PHP",
+        "MySQL",
+        "TypeScript",
+        "TailWind",
+        "Composer",
+        "React",
+        "Node JS",
+        "Eloquent ORM",
+        "JavaScript",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS",
+        "PostCSS",
+        "ESLint",
+        "TypeScript Compiler",
+      ],
+      progress: 72,
+
+    },
+    {
+      title: "Jo-ken-po",
+      media: [
+          { type: "image", src: "/jokenpo/jokenpo.png" },
+          { type: "image", src: "/jokenpo/Jokenpo.png" },
+          { type: "image", src: "/jokenpo/jokenpocard.png" },
+          { type: "image", src: "/jokenpo/jokenpoDwan.png"},
+          { type: "image", src: "/jokenpo/jokenpoWin.png"},
+          { type: "image", src: "/jokenpo/jokenpoLow.png"},
+      ],
+      description:"This is an interactive game inspired by the classic Jokenpô (rock, paper, scissors), but with a fun Yu-Gi-Oh twist. The player challenges the computer using cards with the attributes 'Rock', 'Paper' and 'Scissors'. Each card follows the traditional rules of victory and defeat, creating fast and strategic matches with a nostalgic theme.",
+      languages: [
+        "HTML5",
+        "CSS3",
+        "JavaScript"
+      ],
+      progress: 95,
+    },
+    {
+      title: "Jo-ken-po",
+      media: [
+          { type: "image", src: "/jokenpo/jokenpo.png" },
+          { type: "image", src: "/jokenpo/Jokenpo.png" },
+          { type: "image", src: "/jokenpo/jokenpocard.png" },
+          { type: "image", src: "/jokenpo/jokenpoDwan.png"},
+          { type: "image", src: "/jokenpo/jokenpoWin.png"},
+          { type: "image", src: "/jokenpo/jokenpoLow.png"},
+      ],
+      description:"This is an interactive game inspired by the classic Jokenpô (rock, paper, scissors), but with a fun Yu-Gi-Oh twist. The player challenges the computer using cards with the attributes 'Rock', 'Paper' and 'Scissors'. Each card follows the traditional rules of victory and defeat, creating fast and strategic matches with a nostalgic theme.",
+      languages: [
+        "HTML5",
+        "CSS3",
+        "JavaScript"
+      ],
+      progress: 95,
+    }
   ];
 
   return (
     <section
-      className="relative py-24 px-6 md:px-10 bg-gradient-to-br from-[#8C1F28] via-[#591C21] to-[#D92525] text-white"
+      className="relative py-32 px-6 md:px-10 bg-gradient-to-br from-[#051326] via-[#2467BF] to-[#1763A6] text-white"
       id="experience"
     >
       <div className="mx-auto text-start mb-16">
@@ -66,8 +132,7 @@ export default function Exp() {
           <span className="text-cyan-400">Experience</span>
         </h2>
         <p className="text-gray-300">
-          Programming languages /<br />
-          Management / Hobbies
+          Personal Projects / Freelance Work / <br />Software Development / Project Management
         </p>
       </div>
 
@@ -75,7 +140,7 @@ export default function Exp() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="relative w-full h-96 [perspective:1000px] group overflow-hidden"
+            className="relative w-full h-96 [perspective:1000px] group overflow-hidden led-border"
           >
             <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
               {/* Frente do card: carrossel com vidro */}

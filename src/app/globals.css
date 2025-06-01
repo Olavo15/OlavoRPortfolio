@@ -93,3 +93,41 @@
   html {
   scroll-behavior: smooth;
 }
+.led-border {
+  position: relative;
+  border-radius: 1rem;
+  overflow: visible; 
+}
+
+.led-border::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 1.25rem;
+  padding: 4px;
+  background: linear-gradient(270deg, #00ffff, #00ff00, #00ffff, #0000ff);
+  background-size: 400% 400%;
+  animation: led-glow 3s ease infinite;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 10;
+}
+
+@keyframes led-glow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

@@ -128,25 +128,24 @@ const skills = [
     level: 8,
     experience: "3 yrs",
   }
-
 ];
 
 export default function SkillsSection() {
   const [showAll, setShowAll] = useState(false);
-  const displayedSkills = showAll ? skills : skills.slice(6, 14);
+  const displayedSkills = showAll ? skills : skills.slice(0, 8);
 
   return (
-    <section className="relative py-24 px-6 md:px-10 bg-gradient-to-br from-[#042326] via-[#0A3A40] to-[#0F5959] text-white bg-[#012E40]" id="Skills">
+    <section className="relative py-32 px-4 sm:px-6 md:px-10 bg-gradient-to-br from-[#0F2F59] via-[#0C2240] to-[#02070D] text-white" id="Skills">
       {/* Cabeçalho */}
-      <div className="mx-auto text-start mb-16">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">
+      <div className="mx-auto text-start mb-12">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
           <span className="text-cyan-400">Skills</span>
         </h2>
-        <p className="text-gray-300">Programming languages /<br />Management / Hobbies</p>
+        <p className="text-sm sm:text-base text-gray-300">Programming languages /<br />Management / Hobbies</p>
       </div>
 
       {/* Grade de skills */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-10 place-items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-10 place-items-center">
         {displayedSkills.map((skill, index) => {
           // Determine a classe de animação com base no nome da habilidade
           let animationClass = "";
@@ -192,7 +191,8 @@ export default function SkillsSection() {
               animationClass = "animate-move-pentest";
               break;
             case "Laravel":
-              animationClass = "animate-move-laravel"
+              animationClass = "animate-move-laravel";
+              break;
             default:
               break;
           }
@@ -200,9 +200,9 @@ export default function SkillsSection() {
           return (
             <div key={index} className={`flex flex-col items-center group transition-all duration-300 ${animationClass}`}>
               <div
-                className={`w-28 h-28 ${skill.bgColor} backdrop-blur-lg rounded-full flex justify-center items-center shadow-2xl ${skill.ringColor} ring-2 hover:scale-110 transition-transform`}
+                className={`w-24 h-24 sm:w-28 sm:h-28 ${skill.bgColor} backdrop-blur-lg rounded-full flex justify-center items-center shadow-2xl ${skill.ringColor} ring-2 hover:scale-110 transition-transform`}
               >
-                <img src={skill.img} alt={`${skill.name} Icon`} className="w-24 h-24" />
+                <img src={skill.img} alt={`${skill.name} Icon`} className="w-20 h-20 sm:w-24 sm:h-24 object-contain" />
               </div>
               <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 mt-4 p-3 bg-white/10 backdrop-blur-md rounded-2xl shadow-xl text-center transform scale-95 group-hover:scale-100">
                 <span className={`${skill.color} font-semibold text-lg`}>{skill.name}</span>
@@ -217,10 +217,10 @@ export default function SkillsSection() {
       </div>
 
       {/* Botão Mostrar Mais */}
-      {skills.length > 5 && (
+      {skills.length > 8 && (
         <div className="mt-12 text-center">
           <button
-            className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-full font-semibold transition duration-300"
+            className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-full font-semibold transition duration-300 w-full sm:w-auto"
             onClick={() => setShowAll(!showAll)}
           >
             {showAll ? "See Less skills" : "See All skills"}
