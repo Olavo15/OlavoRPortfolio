@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from 'next/image';
 
 const skills = [
   {
@@ -202,7 +203,7 @@ export default function SkillsSection() {
               <div
                 className={`w-24 h-24 sm:w-28 sm:h-28 ${skill.bgColor} backdrop-blur-lg rounded-full flex justify-center items-center shadow-2xl ${skill.ringColor} ring-2 hover:scale-110 transition-transform`}
               >
-                <img src={skill.img} alt={`${skill.name} Icon`} className="w-20 h-20 sm:w-24 sm:h-24 object-contain" />
+                <Image src={skill.img} alt={`${skill.name} Icon`} width={96} height={96} className="w-20 h-20 sm:w-24 sm:h-24 object-contain"/>
               </div>
               <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 mt-4 p-3 bg-white/10 backdrop-blur-md rounded-2xl shadow-xl text-center transform scale-95 group-hover:scale-100">
                 <span className={`${skill.color} font-semibold text-lg`}>{skill.name}</span>
