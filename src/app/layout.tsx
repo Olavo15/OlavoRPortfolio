@@ -1,8 +1,7 @@
 import './globals.css'
-import { Inter, Playfair_Display } from 'next/font/google'
+import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] });
-const playfair = Playfair_Display({ weight: '700', subsets: ['latin'] });
 
 export const metadata = {
   title: 'O.Regis - Portfolio',
