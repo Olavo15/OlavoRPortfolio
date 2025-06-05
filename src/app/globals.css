@@ -96,7 +96,7 @@
 .led-border {
   position: relative;
   border-radius: 1rem;
-  overflow: visible; 
+  overflow: visible;
 }
 
 .led-border::before {
@@ -131,3 +131,20 @@
     background-position: 0% 50%;
   }
 }
+.front {
+          position: absolute;
+          inset: 0;
+          backface-visibility: hidden;
+          border-radius: 1rem;
+          overflow: hidden;
+          z-index: 10;
+        }
+        .back {
+          position: absolute;
+          inset: 0;
+          backface-visibility: hidden;
+          border-radius: 1rem;
+          overflow: auto;
+          transform: rotateY(180deg);
+          z-index: 20;
+        }
