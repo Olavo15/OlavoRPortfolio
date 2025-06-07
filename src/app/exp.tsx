@@ -108,19 +108,20 @@ export default function Exp() {
       progress: 95,
     },
     {
-      title: "Jo-ken-po",
+      title: "NFL",
       media: [
-        { type: "image", src: "/jokenpo/jokenpo.png" },
-        { type: "image", src: "/jokenpo/Jokenpo.png" },
-        { type: "image", src: "/jokenpo/jokenpocard.png" },
-        { type: "image", src: "/jokenpo/jokenpoDwan.png" },
-        { type: "image", src: "/jokenpo/jokenpoWin.png" },
-        { type: "image", src: "/jokenpo/jokenpoLow.png" },
+        { type: "image", src: "/NFL/nflStart.png" },
+        { type: "image", src: "/NFL/jogos.png" },
+        { type: "image", src: "/NFL/dados.png" },
+        { type: "image", src: "/NFL/defence.png" },
+        { type: "image", src: "/NFL/offense.png" },
+        { type: "image", src: "/NFL/specialTeams.png" },
+        { type: "image", src: "/NFL/result.png"}
       ],
       description:
-        "This is an interactive game inspired by the classic Jokenpô (rock, paper, scissors), but with a fun Yu-Gi-Oh twist. The player challenges the computer using cards with the attributes 'Rock', 'Paper' and 'Scissors'. Each card follows the traditional rules of victory and defeat, creating fast and strategic matches with a nostalgic theme.",
-      languages: ["HTML5", "CSS3", "JavaScript"],
-      progress: 95,
+        "This project aims to leverage detailed NFL statistical data to predict game outcomes, providing valuable insights for sports analysts, coaching staff, and team management. By analyzing a wide range of metrics, including offensive, defensive, and special teams performance, the system is designed to offer data-driven predictions with high accuracy, helping teams make informed decisions.\nThe project collects, manipulates, and processes data from various sources, ensuring that the predictions are based on up-to-date and comprehensive information. It uses advanced technologies to automate the extraction of performance data, from scraping websites to processing raw statistics, allowing the model to continuously adapt and refine itself throughout the season.",
+      languages: ["Node.js", "Axios", "Cheerio", "Puppeteer", "Express", "Chalk"],
+      progress: 24,
     },
   ];
 
