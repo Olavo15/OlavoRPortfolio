@@ -123,6 +123,24 @@ export default function Exp() {
       languages: ["Node.js", "Axios", "Cheerio", "Puppeteer", "Express", "Chalk"],
       progress: 24,
     },
+    {
+      title: "Mario Kart",
+      media: [
+        { type: "image", src: "/mario/players.png" },
+        { type: "image", src: "/mario/escolhendo.png" },
+        { type: "image", src: "/mario/round1.png" },
+        { type: "image", src: "/mario/round2.png" },
+        { type: "image", src: "/mario/round3.png" },
+        { type: "image", src: "/mario/round4.png" },
+        { type: "image", src: "/mario/round5.png"},
+        { type: "image", src: "/mario/end.png"}
+      ],
+      description:
+        "Mario Kart.JS is a racing simulation inspired by the famous Nintendo franchise. Developed in JavaScript, the project recreates the basic logic of the game with a focus on character attributes, classification and strategy. The idea is to apply concepts of object-oriented programming and game logic in an interactive experience via terminal.",
+      languages: ["Node.js"],
+      progress: 95,
+    },
+    
   ];
 
   return (
