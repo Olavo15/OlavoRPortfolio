@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import ClientCarousel from "../components/ClientCarousel";
+import ProjectCard from "../components/ProjectCard";
 
 export default function Exp() {
   const projects = [
@@ -101,6 +101,7 @@ export default function Exp() {
         { type: "image", src: "/jokenpo/jokenpoDwan.png" },
         { type: "image", src: "/jokenpo/jokenpoWin.png" },
         { type: "image", src: "/jokenpo/jokenpoLow.png" },
+        { type: "video", src: "/jokenpo/jokenpo.mp4" }
       ],
       description:
         "This is an interactive game inspired by the classic Jokenpô (rock, paper, scissors), but with a fun Yu-Gi-Oh twist. The player challenges the computer using cards with the attributes 'Rock', 'Paper' and 'Scissors'. Each card follows the traditional rules of victory and defeat, creating fast and strategic matches with a nostalgic theme.",
@@ -142,7 +143,7 @@ export default function Exp() {
     },
     
   ];
-  const [showAll, setShowAll] = useState(false);
+   const [showAll, setShowAll] = useState(false);
   const visibleProjects = showAll ? projects : projects.slice(0, 6);
 
   return (
@@ -162,36 +163,7 @@ export default function Exp() {
 
       <div className="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {visibleProjects.map((project, index) => (
-          <div
-            key={index}
-            className="relative w-full h-96 [perspective:1000px] group led-border"
-          >
-            <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] rounded-xl">
-              {/* Frente */}
-              <div className="front bg-white/10 backdrop-blur-xl border border-white/30 shadow-lg p-4 flex items-center justify-center">
-                <ClientCarousel media={project.media} />
-              </div>
-
-              {/* Verso */}
-              <div className="back bg-[#051326]/90 rounded-xl px-6 py-5 flex flex-col backdrop-blur-sm">
-                <h3 className="text-xl font-bold mb-4 text-center text-white">
-                  {project.title}
-                </h3>
-                <div className="flex-1 overflow-auto pr-2">
-                  <p className="text-sm text-gray-200 whitespace-pre-line mb-4 leading-relaxed">
-                    {project.description}
-                  </p>
-                  <p className="text-sm mb-2 text-gray-300">
-                    <strong>Languages:</strong> {project.languages.join(", ")}
-                  </p>
-                  <p className="text-sm text-gray-300">
-                    <strong>Progress:</strong>{" "}
-                    <span className="text-cyan-400">{project.progress}%</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <ProjectCard key={index} project={project} />
         ))}
       </div>
 

@@ -13,7 +13,7 @@ export default function ClientCarousel({ media }: { media: { type: string; src: 
       spaceBetween={10}
       slidesPerView={1}
       loop={true}
-      autoplay={{ delay: 3000, disableOnInteraction: false }}
+      autoplay={{ delay: 4000, disableOnInteraction: false }}
       pagination={{ clickable: true }}
       className="w-full h-full"
     >
