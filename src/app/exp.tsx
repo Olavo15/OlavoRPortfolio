@@ -1,5 +1,5 @@
 "use client";
-
+import { useState } from "react";
 import ClientCarousel from "../components/ClientCarousel";
 
 export default function Exp() {
@@ -142,56 +142,67 @@ export default function Exp() {
     },
     
   ];
+  const [showAll, setShowAll] = useState(false);
+  const visibleProjects = showAll ? projects : projects.slice(0, 6);
 
   return (
-     <section
-        className="relative py-32 px-6 md:px-10 bg-gradient-to-br from-[#051326] via-[#2467BF] to-[#1763A6] text-white"
-        id="experience"
-      >
-        <div className="mx-auto text-start mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="text-cyan-400">Experience</span>
-          </h2>
-          <p className="text-gray-300">
-            Personal Projects / Freelance Work / <br />
-            Software Development / Project Management
-          </p>
-        </div>
+    <section
+      className="relative py-32 px-6 md:px-10 bg-gradient-to-br from-[#051326] via-[#2467BF] to-[#1763A6] text-white"
+      id="experience"
+    >
+      <div className="mx-auto text-start mb-16">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <span className="text-cyan-400">Experience</span>
+        </h2>
+        <p className="text-gray-300">
+          Personal Projects / Freelance Work / <br />
+          Software Development / Project Management
+        </p>
+      </div>
 
-        <div className="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="relative w-full h-96 [perspective:1000px] group led-border"
-            >
-              <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] rounded-xl">
-                {/* Frente */}
-                <div className="front bg-white/10 backdrop-blur-xl border border-white/30 shadow-lg p-4 flex items-center justify-center">
-                  <ClientCarousel media={project.media} />
-                </div>
+      <div className="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        {visibleProjects.map((project, index) => (
+          <div
+            key={index}
+            className="relative w-full h-96 [perspective:1000px] group led-border"
+          >
+            <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] rounded-xl">
+              {/* Frente */}
+              <div className="front bg-white/10 backdrop-blur-xl border border-white/30 shadow-lg p-4 flex items-center justify-center">
+                <ClientCarousel media={project.media} />
+              </div>
 
-                {/* Verso */}
-                <div className="back bg-[#051326]/90 rounded-xl px-6 py-5 flex flex-col backdrop-blur-sm">
-                  <h3 className="text-xl font-bold mb-4 text-center text-white">
-                    {project.title}
-                  </h3>
-                  <div className="flex-1 overflow-auto pr-2">
-                    <p className="text-sm text-gray-200 whitespace-pre-line mb-4 leading-relaxed">
-                      {project.description}
-                    </p>
-                    <p className="text-sm mb-2 text-gray-300">
-                      <strong>Linguagens:</strong> {project.languages.join(", ")}
-                    </p>
-                    <p className="text-sm text-gray-300">
-                      <strong>Progresso:</strong>{" "}
-                      <span className="text-cyan-400">{project.progress}%</span>
-                    </p>
-                  </div>
+              {/* Verso */}
+              <div className="back bg-[#051326]/90 rounded-xl px-6 py-5 flex flex-col backdrop-blur-sm">
+                <h3 className="text-xl font-bold mb-4 text-center text-white">
+                  {project.title}
+                </h3>
+                <div className="flex-1 overflow-auto pr-2">
+                  <p className="text-sm text-gray-200 whitespace-pre-line mb-4 leading-relaxed">
+                    {project.description}
+                  </p>
+                  <p className="text-sm mb-2 text-gray-300">
+                    <strong>Languages:</strong> {project.languages.join(", ")}
+                  </p>
+                  <p className="text-sm text-gray-300">
+                    <strong>Progress:</strong>{" "}
+                    <span className="text-cyan-400">{project.progress}%</span>
+                  </p>
                 </div>
               </div>
             </div>
-          ))}
-        </div>
-      </section>
+          </div>
+        ))}
+      </div>
+
+      <div className="text-center mt-10">
+        <button
+          onClick={() => setShowAll((prev) => !prev)}
+          className="px-6 py-3 rounded-md bg-cyan-500 hover:bg-cyan-600 transition text-white font-semibold"
+        >
+          {showAll ? "See Less Projects" : "See All Projects"}
+        </button>
+      </div>
+    </section>
   );
 }
