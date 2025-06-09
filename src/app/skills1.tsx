@@ -1,6 +1,6 @@
 "use client";
-import { useState } from "react";
-import Image from 'next/image';
+import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const skills = [
   {
@@ -109,7 +109,7 @@ const skills = [
     ringColor: "ring-black",
     img: "https://www.svgrepo.com/show/330767/kalilinux.svg",
     level: 8,
-    experience: "6yrs",
+    experience: "5yrs",
   },
   {
     name: "Pentest",
@@ -128,88 +128,101 @@ const skills = [
     img: "https://static-00.iconduck.com/assets.00/laravel-icon-995x1024-dk77ahh4.png",
     level: 8,
     experience: "3 yrs",
-  }
+  },
 ];
 
 export default function SkillsSection() {
   const [showAll, setShowAll] = useState(false);
+  const [openSkills, setOpenSkills] = useState([]);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detecta se está em tela mobile/tablet
+  useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth < 768); // breakpoint md do Tailwind
+    }
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const displayedSkills = showAll ? skills : skills.slice(0, 8);
 
+  function toggleSkill(index) {
+    if (!isMobile) return; // só habilita clique para mobile/tablet
+
+    if (openSkills.includes(index)) {
+      setOpenSkills(openSkills.filter((i) => i !== index));
+    } else {
+      setOpenSkills([...openSkills, index]);
+    }
+  }
+
   return (
-    <section className="relative py-32 px-4 sm:px-6 md:px-10 bg-gradient-to-br from-[#0F2F59] via-[#0C2240] to-[#02070D] text-white" id="Skills">
+    <section
+      className="relative py-32 px-4 sm:px-6 md:px-10 bg-gradient-to-br from-[#0F2F59] via-[#0C2240] to-[#02070D] text-white"
+      id="Skills"
+    >
       {/* Cabeçalho */}
       <div className="mx-auto text-start mb-12">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
           <span className="text-cyan-400">Skills</span>
         </h2>
-        <p className="text-sm sm:text-base text-gray-300">Programming languages /<br />Management / Hobbies</p>
+        <p className="text-sm sm:text-base text-gray-300">
+          Programming languages /<br />
+          Management / Hobbies
+        </p>
       </div>
 
       {/* Grade de skills */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-10 place-items-center">
         {displayedSkills.map((skill, index) => {
-          // Determine a classe de animação com base no nome da habilidade
-          let animationClass = "";
-
-          switch (skill.name) {
-            case "React":
-              animationClass = "animate-move-react";
-              break;
-            case "Python":
-              animationClass = "animate-move-python";
-              break;
-            case "PHP":
-              animationClass = "animate-move-php";
-              break;
-            case "Node.js":
-              animationClass = "animate-move-nodejs";
-              break;
-            case "JavaScript":
-              animationClass = "animate-move-js";
-              break;
-            case "HTML":
-              animationClass = "animate-move-html";
-              break;
-            case "CSS":
-              animationClass = "animate-move-css";
-              break;
-            case "Tailwind":
-              animationClass = "animate-move-tailwind";
-              break;
-            case "Docker":
-              animationClass = "animate-move-docker";
-              break;
-            case "MySQL":
-              animationClass = "animate-move-mysql";
-              break;
-            case "MariaDB":
-              animationClass = "animate-move-mariadb";
-              break;
-            case "Kali":
-              animationClass = "animate-move-kali";
-              break;
-            case "Pentest":
-              animationClass = "animate-move-pentest";
-              break;
-            case "Laravel":
-              animationClass = "animate-move-laravel";
-              break;
-            default:
-              break;
-          }
+          const animationClass = getAnimationClass(skill.name);
+          const isOpen = openSkills.includes(index);
 
           return (
-            <div key={index} className={`flex flex-col items-center group transition-all duration-300 ${animationClass}`}>
+            <div
+              key={index}
+              className={`flex flex-col items-center group transition-all duration-300 ${animationClass} cursor-pointer`}
+              onClick={() => toggleSkill(index)}
+            >
               <div
                 className={`w-24 h-24 sm:w-28 sm:h-28 ${skill.bgColor} backdrop-blur-lg rounded-full flex justify-center items-center shadow-2xl ${skill.ringColor} ring-2 hover:scale-110 transition-transform`}
               >
-                <Image src={skill.img} alt={`${skill.name} Icon`} width={96} height={96} className="w-20 h-20 sm:w-24 sm:h-24 object-contain"/>
+                <Image
+                  src={skill.img}
+                  alt={`${skill.name} Icon`}
+                  width={96}
+                  height={96}
+                  className="w-20 h-20 sm:w-24 sm:h-24 object-contain"
+                />
               </div>
-              <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 mt-4 p-3 bg-white/10 backdrop-blur-md rounded-2xl shadow-xl text-center transform scale-95 group-hover:scale-100">
-                <span className={`${skill.color} font-semibold text-lg`}>{skill.name}</span>
+
+              {/* Detalhes da skill */}
+              <div
+                className={`
+                  mt-4 p-3 bg-white/10 backdrop-blur-md rounded-2xl shadow-xl text-center transform scale-95
+                  transition-all duration-300
+                  ${isMobile
+                    ? isOpen
+                      ? "opacity-100 scale-100 max-h-[200px]"
+                      : "opacity-0 scale-95 max-h-0 overflow-hidden"
+                    : "opacity-0 group-hover:opacity-100 group-hover:scale-100 max-h-[200px]"
+                  }
+                `}
+              >
+                <span className={`${skill.color} font-semibold text-lg`}>
+                  {skill.name}
+                </span>
                 <div className="text-xs text-gray-200 mt-1">
-                  <p>Level: <span className="text-teal-300">{skill.level}</span></p>
-                  <p>Experience: <span className="text-teal-300">{skill.experience}</span></p>
+                  <p>
+                    Level: <span className="text-teal-300">{skill.level}</span>
+                  </p>
+                  <p>
+                    Experience:{" "}
+                    <span className="text-teal-300">{skill.experience}</span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -230,4 +243,40 @@ export default function SkillsSection() {
       )}
     </section>
   );
+}
+
+// Função para pegar classe de animação (conforme seu código)
+function getAnimationClass(name) {
+  switch (name) {
+    case "React":
+      return "animate-move-react";
+    case "Python":
+      return "animate-move-python";
+    case "PHP":
+      return "animate-move-php";
+    case "Node.js":
+      return "animate-move-nodejs";
+    case "JavaScript":
+      return "animate-move-js";
+    case "HTML":
+      return "animate-move-html";
+    case "CSS":
+      return "animate-move-css";
+    case "Tailwind":
+      return "animate-move-tailwind";
+    case "Docker":
+      return "animate-move-docker";
+    case "MySQL":
+      return "animate-move-mysql";
+    case "MariaDB":
+      return "animate-move-mariadb";
+    case "Kali":
+      return "animate-move-kali";
+    case "Pentest":
+      return "animate-move-pentest";
+    case "Laravel":
+      return "animate-move-laravel";
+    default:
+      return "";
+  }
 }
