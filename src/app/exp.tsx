@@ -141,6 +141,21 @@ export default function Exp() {
       languages: ["Node.js"],
       progress: 95,
     },
+    {
+      title: "Mario Kart",
+      media: [
+        { type: "image", src: "/Ransomware/text.png" },
+        { type: "image", src: "/Ransomware/exemplo.png" },
+        { type: "image", src: "/Ransomware/encrypter.png" },
+        { type: "image", src: "/Ransomware/ransomwaretroll.png" },
+        { type: "image", src: "/Ransomware/descrypter.png" },
+        { type: "image", src: "/Ransomware/textDescrypter.png" },
+      ],
+      description:
+        "Este projeto contém um exemplo de código que realiza a criptografia e a descrição de um arquivo usando a biblioteca pyaes em Python.\n O objetivo deste código é demonstrar como um arquivo pode ser criptografado, armazenado com um novo nome e, posteriormente, descriptografado para recuperar o conteúdo original.",
+      languages: ["Python"],
+      progress: 100,
+    },
     
   ];
    const [showAll, setShowAll] = useState(false);
