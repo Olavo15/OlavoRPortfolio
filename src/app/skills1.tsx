@@ -130,16 +130,14 @@ const skills = [
     experience: "3 yrs",
   },
 ];
-
 export default function SkillsSection() {
   const [showAll, setShowAll] = useState(false);
-  const [openSkills, setOpenSkills] = useState([]);
+  const [openSkills, setOpenSkills] = useState<number[]>([]);
   const [isMobile, setIsMobile] = useState(false);
 
-  // Detecta se está em tela mobile/tablet
   useEffect(() => {
     function handleResize() {
-      setIsMobile(window.innerWidth < 768); // breakpoint md do Tailwind
+      setIsMobile(window.innerWidth < 768);
     }
 
     handleResize();
@@ -149,14 +147,11 @@ export default function SkillsSection() {
 
   const displayedSkills = showAll ? skills : skills.slice(0, 8);
 
-  function toggleSkill(index) {
-    if (!isMobile) return; // só habilita clique para mobile/tablet
-
-    if (openSkills.includes(index)) {
-      setOpenSkills(openSkills.filter((i) => i !== index));
-    } else {
-      setOpenSkills([...openSkills, index]);
-    }
+  function toggleSkill(index: number) {
+    if (!isMobile) return;
+    setOpenSkills((prev) =>
+      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
+    );
   }
 
   return (
@@ -164,7 +159,6 @@ export default function SkillsSection() {
       className="relative py-32 px-4 sm:px-6 md:px-10 bg-gradient-to-br from-[#0F2F59] via-[#0C2240] to-[#02070D] text-white"
       id="Skills"
     >
-      {/* Cabeçalho */}
       <div className="mx-auto text-start mb-12">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
           <span className="text-cyan-400">Skills</span>
@@ -175,7 +169,6 @@ export default function SkillsSection() {
         </p>
       </div>
 
-      {/* Grade de skills */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-10 place-items-center">
         {displayedSkills.map((skill, index) => {
           const animationClass = getAnimationClass(skill.name);
@@ -199,16 +192,16 @@ export default function SkillsSection() {
                 />
               </div>
 
-              {/* Detalhes da skill */}
               <div
                 className={`
                   mt-4 p-3 bg-white/10 backdrop-blur-md rounded-2xl shadow-xl text-center transform scale-95
                   transition-all duration-300
-                  ${isMobile
-                    ? isOpen
-                      ? "opacity-100 scale-100 max-h-[200px]"
-                      : "opacity-0 scale-95 max-h-0 overflow-hidden"
-                    : "opacity-0 group-hover:opacity-100 group-hover:scale-100 max-h-[200px]"
+                  ${
+                    isMobile
+                      ? isOpen
+                        ? "opacity-100 scale-100 max-h-[200px]"
+                        : "opacity-0 scale-95 max-h-0 overflow-hidden"
+                      : "opacity-0 group-hover:opacity-100 group-hover:scale-100 max-h-[200px]"
                   }
                 `}
               >
@@ -221,7 +214,9 @@ export default function SkillsSection() {
                   </p>
                   <p>
                     Experience:{" "}
-                    <span className="text-teal-300">{skill.experience}</span>
+                    <span className="text-teal-300">
+                      {skill.experience}
+                    </span>
                   </p>
                 </div>
               </div>
@@ -230,7 +225,6 @@ export default function SkillsSection() {
         })}
       </div>
 
-      {/* Botão Mostrar Mais */}
       {skills.length > 8 && (
         <div className="mt-12 text-center">
           <button
@@ -245,38 +239,22 @@ export default function SkillsSection() {
   );
 }
 
-// Função para pegar classe de animação (conforme seu código)
-function getAnimationClass(name) {
-  switch (name) {
-    case "React":
-      return "animate-move-react";
-    case "Python":
-      return "animate-move-python";
-    case "PHP":
-      return "animate-move-php";
-    case "Node.js":
-      return "animate-move-nodejs";
-    case "JavaScript":
-      return "animate-move-js";
-    case "HTML":
-      return "animate-move-html";
-    case "CSS":
-      return "animate-move-css";
-    case "Tailwind":
-      return "animate-move-tailwind";
-    case "Docker":
-      return "animate-move-docker";
-    case "MySQL":
-      return "animate-move-mysql";
-    case "MariaDB":
-      return "animate-move-mariadb";
-    case "Kali":
-      return "animate-move-kali";
-    case "Pentest":
-      return "animate-move-pentest";
-    case "Laravel":
-      return "animate-move-laravel";
-    default:
-      return "";
-  }
+function getAnimationClass(name: string): string {
+  const map: Record<string, string> = {
+    React: "animate-move-react",
+    Python: "animate-move-python",
+    PHP: "animate-move-php",
+    "Node.js": "animate-move-nodejs",
+    JavaScript: "animate-move-js",
+    HTML: "animate-move-html",
+    CSS: "animate-move-css",
+    Tailwind: "animate-move-tailwind",
+    Docker: "animate-move-docker",
+    MySQL: "animate-move-mysql",
+    MariaDB: "animate-move-mariadb",
+    Kali: "animate-move-kali",
+    Pentest: "animate-move-pentest",
+    Laravel: "animate-move-laravel",
+  };
+  return map[name] || "";
 }
