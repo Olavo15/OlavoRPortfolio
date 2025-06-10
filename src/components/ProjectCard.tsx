@@ -2,7 +2,15 @@
 import { useState, useEffect } from "react";
 import ClientCarousel from "./ClientCarousel";
 
-export default function ProjectCard({ project }: { project: any }) {
+interface Project {
+  title: string;
+  description: string;
+  languages: string[];
+  progress: number;
+  media: string[]; 
+}
+
+export default function ProjectCard({ project }: { project: Project }) {
   const [isMobile, setIsMobile] = useState(false);
   const [isFlipped, setIsFlipped] = useState(false);
 
