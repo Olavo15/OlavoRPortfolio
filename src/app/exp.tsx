@@ -142,7 +142,7 @@ export default function Exp() {
       progress: 95,
     },
     {
-      title: "Mario Kart",
+      title: "Ransomware",
       media: [
         { type: "image", src: "/Ransomware/text.png" },
         { type: "image", src: "/Ransomware/exemplo.png" },
