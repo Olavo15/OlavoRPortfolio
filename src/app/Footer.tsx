@@ -54,7 +54,7 @@ export default function Footer() {
 
       {/* Centro: Copyright */}
       <div>
-        Copyright © 2025 Olavo Pereira Regis - Todos os direitos reservados
+        Copyright © 2025 Olavo - Todos os direitos reservados
       </div>
 
       {/* Direita: logo */}
