@@ -125,7 +125,7 @@ const skills = [
     color: "text-[#FF2D20]",
     bgColor: "bg-[#FF2D20]/30",
     ringColor: "ring-[#FF2D20]",
-    img: "https://static-00.iconduck.com/assets.00/laravel-icon-995x1024-dk77ahh4.png",
+    img: "/laravel-2.svg",
     level: 8,
     experience: "3 yrs",
   },
@@ -196,12 +196,11 @@ export default function SkillsSection() {
                 className={`
                   mt-4 p-3 bg-white/10 backdrop-blur-md rounded-2xl shadow-xl text-center transform scale-95
                   transition-all duration-300
-                  ${
-                    isMobile
-                      ? isOpen
-                        ? "opacity-100 scale-100 max-h-[200px]"
-                        : "opacity-0 scale-95 max-h-0 overflow-hidden"
-                      : "opacity-0 group-hover:opacity-100 group-hover:scale-100 max-h-[200px]"
+                  ${isMobile
+                    ? isOpen
+                      ? "opacity-100 scale-100 max-h-[200px]"
+                      : "opacity-0 scale-95 max-h-0 overflow-hidden"
+                    : "opacity-0 group-hover:opacity-100 group-hover:scale-100 max-h-[200px]"
                   }
                 `}
               >
